@@ -10,13 +10,13 @@
         android:id="@+id/profile_holder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
         android:layout_marginRight="25dp"
         android:gravity="left"
-        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
@@ -29,24 +29,25 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
             android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="Hi Mike,"
                 android:textColor="@color/black"
                 android:textSize="25sp"
-                android:textStyle="bold"
-                android:text="Hi Mike,">
+                android:textStyle="bold">
 
             </TextView>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:text="Welcome back">
+                android:text="Welcome back"
+                android:textColor="@color/black">
 
             </TextView>
         </LinearLayout>
@@ -54,32 +55,33 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/current_balance_holder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="30dp"
         android:layout_marginLeft="25dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="25dp"
-        android:gravity="left"
-        android:padding="15dp"
         android:background="@drawable/view_bg"
-        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:padding="15dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/profile_holder">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:text="Today">
+            android:text="Today"
+            android:textColor="@color/black">
 
         </TextView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
             android:text="$19,892"
+            android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold">
 
@@ -88,8 +90,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:text="Account Balance">
+            android:text="Account Balance"
+            android:textColor="@color/black">
 
         </TextView>
 
@@ -107,18 +109,18 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="$4,000"
                     android:textColor="@color/black"
-                    android:textStyle="bold"
                     android:textSize="25sp"
-                    android:text="$4,000">
+                    android:textStyle="bold">
 
                 </TextView>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:text="year-to-date">
+                    android:text="year-to-date"
+                    android:textColor="@color/black">
 
                 </TextView>
 
@@ -127,25 +129,25 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
                 android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="$1,982"
                     android:textColor="@color/black"
-                    android:textStyle="bold"
                     android:textSize="25sp"
-                    android:text="$1,982">
+                    android:textStyle="bold">
 
                 </TextView>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:text="Total Interest">
+                    android:text="Total Interest"
+                    android:textColor="@color/black">
 
                 </TextView>
 
@@ -156,27 +158,63 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAllCaps="false"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:text="I want to..">
+            android:text="I want to.."
+            android:textAllCaps="false">
 
         </Button>
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/text_home"
+    <LinearLayout
+        android:id="@+id/less_details"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/view_bg"
+        android:orientation="vertical"
+        android:padding="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/current_balance_holder">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recent transactions"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="2020-07-01">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Withdrawal transfer to bank-XX11"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"></View>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
